@@ -1,0 +1,35 @@
+# Logfile created on 2022-04-11 16:34:54 +0200 by logger.rb/66358
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-04-11 16:34:54 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [7107c19e] Running /usr/bin/env mkdir -p /data/sites/web/otomatiesbe/tmp as otomatiesbe@ssh.otomaties.be
+  INFO [7107c19e] Finished in 1.045 seconds with exit status 0 (successful).
+  INFO Uploading /data/sites/web/otomatiesbe/tmp/git-ssh-973472b45747b19608c2.sh 100.0%
+  INFO [0c9451fd] Running /usr/bin/env chmod 700 /data/sites/web/otomatiesbe/tmp/git-ssh-973472b45747b19608c2.sh as otomatiesbe@ssh.otomaties.be
+  INFO [0c9451fd] Finished in 0.183 seconds with exit status 0 (successful).
+  INFO [34dacfd0] Running /usr/bin/env git ls-remote git@github.com:tombroucke/capistrano-test.git HEAD as otomatiesbe@ssh.otomaties.be
+  INFO [34dacfd0] Finished in 1.401 seconds with exit status 0 (successful).
+  INFO [3282af98] Running /usr/bin/env mkdir -p /data/sites/web/otomatiesbe/capistrano-test/shared /data/sites/web/otomatiesbe/capistrano-test/releases as otomatiesbe@ssh.otomaties.be
+  INFO [3282af98] Finished in 0.200 seconds with exit status 0 (successful).
+  INFO [f13fce9b] Running /usr/bin/env git clone --mirror git@github.com:tombroucke/capistrano-test.git /data/sites/web/otomatiesbe/capistrano-test/repo as otomatiesbe@ssh.otomaties.be
+  INFO [f13fce9b] Finished in 2.061 seconds with exit status 0 (successful).
+  INFO [fe3ce91d] Running /usr/bin/env git remote set-url origin git@github.com:tombroucke/capistrano-test.git as otomatiesbe@ssh.otomaties.be
+  INFO [fe3ce91d] Finished in 0.260 seconds with exit status 0 (successful).
+  INFO [20e4d266] Running /usr/bin/env git remote update --prune as otomatiesbe@ssh.otomaties.be
+  INFO [20e4d266] Finished in 1.467 seconds with exit status 0 (successful).
+  INFO [db62d5f8] Running /usr/bin/env mkdir -p /data/sites/web/otomatiesbe/capistrano-test/releases/20220411143457 as otomatiesbe@ssh.otomaties.be
+  INFO [db62d5f8] Finished in 1.116 seconds with exit status 0 (successful).
+  INFO [367bdc74] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /data/sites/web/otomatiesbe/capistrano-test/releases/20220411143457 as otomatiesbe@ssh.otomaties.be
+  INFO [367bdc74] Finished in 0.216 seconds with exit status 0 (successful).
+  INFO [7869019b] Running /usr/bin/env echo "1edd83cdbde5f5be169f5aee08408be04c537375" > REVISION as otomatiesbe@ssh.otomaties.be
+  INFO [7869019b] Finished in 0.203 seconds with exit status 0 (successful).
+  INFO [e1bf5548] Running /usr/bin/env ln -s /data/sites/web/otomatiesbe/capistrano-test/releases/20220411143457 /data/sites/web/otomatiesbe/capistrano-test/releases/current as otomatiesbe@ssh.otomaties.be
+  INFO [e1bf5548] Finished in 0.232 seconds with exit status 0 (successful).
+  INFO [e87f5ea5] Running /usr/bin/env mv /data/sites/web/otomatiesbe/capistrano-test/releases/current /data/sites/web/otomatiesbe/capistrano-test as otomatiesbe@ssh.otomaties.be
+  INFO [e87f5ea5] Finished in 0.201 seconds with exit status 0 (successful).
+  INFO [54367065] Running echo 20220411143457 1edd83cdbde5f5be169f5aee08408be04c537375 > /data/sites/web/otomatiesbe/capistrano-test/releases/20220411143457/www/revision.txt as otomatiesbe@ssh.otomaties.be
+  INFO [54367065] Finished in 0.197 seconds with exit status 0 (successful).
+  INFO [cbffe587] Running /usr/bin/env reloadPHP.sh as otomatiesbe@ssh.otomaties.be
+  INFO [cbffe587] Finished in 0.903 seconds with exit status 0 (successful).
+  INFO [0efbdf28] Running /usr/bin/env echo "Branch master (at 1edd83cdbde5f5be169f5aee08408be04c537375) deployed as release 20220411143457 by tombroucke" >> /data/sites/web/otomatiesbe/capistrano-test/revisions.log as otomatiesbe@ssh.otomaties.be
+  INFO [0efbdf28] Finished in 0.286 seconds with exit status 0 (successful).

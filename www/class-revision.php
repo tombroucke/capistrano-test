@@ -28,7 +28,7 @@ class Revision
 
     private function findRevisionFile()
     {
-        $filePath = dirname(__FILE__) . 'revision.txt';
+        $filePath = dirname(__FILE__) . '/revision.txt';
         if (file_exists($filePath)) {
             return $filePath;
         }
