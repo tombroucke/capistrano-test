@@ -56,8 +56,8 @@ class Revision
             return $text;
         }
         foreach ($this->release as $key => $value) {
-            $text .= sprintf(' | %s: <strong>%s</strong>', $key, $value);
+            $text .= sprintf('%s: <strong>%s</strong> |', $key, $value);
         }
-        return $text;
+        return rtrim($text, ' | ');
     }
 }

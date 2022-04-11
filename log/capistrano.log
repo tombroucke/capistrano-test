@@ -33,3 +33,36 @@
   INFO [cbffe587] Finished in 0.903 seconds with exit status 0 (successful).
   INFO [0efbdf28] Running /usr/bin/env echo "Branch master (at 1edd83cdbde5f5be169f5aee08408be04c537375) deployed as release 20220411143457 by tombroucke" >> /data/sites/web/otomatiesbe/capistrano-test/revisions.log as otomatiesbe@ssh.otomaties.be
   INFO [0efbdf28] Finished in 0.286 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-04-11 16:41:48 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [75f0cf7b] Running /usr/bin/env mkdir -p /data/sites/web/otomatiesbe/tmp as otomatiesbe@ssh.otomaties.be
+  INFO [75f0cf7b] Finished in 1.167 seconds with exit status 0 (successful).
+  INFO Uploading /data/sites/web/otomatiesbe/tmp/git-ssh-e399b159310cf1c774c9.sh 100.0%
+  INFO [f5e7b4f5] Running /usr/bin/env chmod 700 /data/sites/web/otomatiesbe/tmp/git-ssh-e399b159310cf1c774c9.sh as otomatiesbe@ssh.otomaties.be
+  INFO [f5e7b4f5] Finished in 0.210 seconds with exit status 0 (successful).
+  INFO [dbd71184] Running /usr/bin/env git ls-remote git@github.com:tombroucke/capistrano-test.git HEAD as otomatiesbe@ssh.otomaties.be
+  INFO [dbd71184] Finished in 1.363 seconds with exit status 0 (successful).
+  INFO [64093bc2] Running /usr/bin/env mkdir -p /data/sites/web/otomatiesbe/capistrano-test/shared /data/sites/web/otomatiesbe/capistrano-test/releases as otomatiesbe@ssh.otomaties.be
+  INFO [64093bc2] Finished in 0.219 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /data/sites/web/otomatiesbe/capistrano-test/repo
+  INFO [a06a675d] Running /usr/bin/env git remote set-url origin git@github.com:tombroucke/capistrano-test.git as otomatiesbe@ssh.otomaties.be
+  INFO [a06a675d] Finished in 0.260 seconds with exit status 0 (successful).
+  INFO [ce061639] Running /usr/bin/env git remote update --prune as otomatiesbe@ssh.otomaties.be
+  INFO [ce061639] Finished in 1.526 seconds with exit status 0 (successful).
+  INFO [0d19b21b] Running /usr/bin/env mkdir -p /data/sites/web/otomatiesbe/capistrano-test/releases/20220411144151 as otomatiesbe@ssh.otomaties.be
+  INFO [0d19b21b] Finished in 0.241 seconds with exit status 0 (successful).
+  INFO [14164351] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /data/sites/web/otomatiesbe/capistrano-test/releases/20220411144151 as otomatiesbe@ssh.otomaties.be
+  INFO [14164351] Finished in 0.236 seconds with exit status 0 (successful).
+  INFO [2a006ca3] Running /usr/bin/env echo "7637ff4462e6159ae7d8ce636ab009c99dae6e27" > REVISION as otomatiesbe@ssh.otomaties.be
+  INFO [2a006ca3] Finished in 0.196 seconds with exit status 0 (successful).
+  INFO [b0255b92] Running /usr/bin/env ln -s /data/sites/web/otomatiesbe/capistrano-test/releases/20220411144151 /data/sites/web/otomatiesbe/capistrano-test/releases/current as otomatiesbe@ssh.otomaties.be
+  INFO [b0255b92] Finished in 0.237 seconds with exit status 0 (successful).
+  INFO [ce001ef5] Running /usr/bin/env mv /data/sites/web/otomatiesbe/capistrano-test/releases/current /data/sites/web/otomatiesbe/capistrano-test as otomatiesbe@ssh.otomaties.be
+  INFO [ce001ef5] Finished in 0.240 seconds with exit status 0 (successful).
+  INFO [9ec63e04] Running echo 20220411144151 7637ff4462e6159ae7d8ce636ab009c99dae6e27 > /data/sites/web/otomatiesbe/capistrano-test/releases/20220411144151/www/revision.txt as otomatiesbe@ssh.otomaties.be
+  INFO [9ec63e04] Finished in 0.208 seconds with exit status 0 (successful).
+  INFO [71eee2da] Running /usr/bin/env reloadPHP.sh as otomatiesbe@ssh.otomaties.be
+  INFO [71eee2da] Finished in 1.026 seconds with exit status 0 (successful).
+  INFO [2d2aa7f2] Running /usr/bin/env echo "Branch master (at 7637ff4462e6159ae7d8ce636ab009c99dae6e27) deployed as release 20220411144151 by tombroucke" >> /data/sites/web/otomatiesbe/capistrano-test/revisions.log as otomatiesbe@ssh.otomaties.be
+  INFO [2d2aa7f2] Finished in 0.265 seconds with exit status 0 (successful).
