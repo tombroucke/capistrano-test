@@ -1,6 +1,6 @@
 set :stage, :production
 set :deploy_to, "/data/sites/web/otomatiesbe/capistrano-test"
-set :branch, 'master'
+set :branch, 'without-composer'
 
 # Simple Role Syntax
 # ==================
