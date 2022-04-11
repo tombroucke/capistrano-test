@@ -887,3 +887,23 @@
   INFO [80e072c6] Finished in 17.134 seconds with exit status 0 (successful).
   INFO [5a3d3905] Running /usr/bin/env echo "Branch master (at 975b43d178728d0593810a7f214e605e4a5e5a95) deployed as release 20220411150830 by tombroucke" >> /data/sites/web/otomatiesbe/capistrano-test/revisions.log as otomatiesbe@ssh.otomaties.be
   INFO [5a3d3905] Finished in 0.214 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-04-11 17:23:04 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [331dc4dc] Running /usr/bin/env mkdir -p /data/sites/web/otomatiesbe/tmp as otomatiesbe@ssh.otomaties.be
+  INFO [331dc4dc] Finished in 1.127 seconds with exit status 0 (successful).
+  INFO Uploading /data/sites/web/otomatiesbe/tmp/git-ssh-cc344b0373a87e5e16e5.sh 100.0%
+  INFO [3e7ba4d8] Running /usr/bin/env chmod 700 /data/sites/web/otomatiesbe/tmp/git-ssh-cc344b0373a87e5e16e5.sh as otomatiesbe@ssh.otomaties.be
+  INFO [3e7ba4d8] Finished in 0.193 seconds with exit status 0 (successful).
+  INFO [e3261833] Running /usr/bin/env git ls-remote git@github.com:tombroucke/capistrano-test.git HEAD as otomatiesbe@ssh.otomaties.be
+  INFO [e3261833] Finished in 1.390 seconds with exit status 0 (successful).
+  INFO [e764d30e] Running /usr/bin/env mkdir -p /data/sites/web/otomatiesbe/capistrano-test/shared /data/sites/web/otomatiesbe/capistrano-test/releases as otomatiesbe@ssh.otomaties.be
+  INFO [e764d30e] Finished in 0.184 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /data/sites/web/otomatiesbe/capistrano-test/repo
+  INFO [e06729b0] Running /usr/bin/env git remote set-url origin git@github.com:tombroucke/capistrano-test.git as otomatiesbe@ssh.otomaties.be
+  INFO [e06729b0] Finished in 0.235 seconds with exit status 0 (successful).
+  INFO [7b487e56] Running /usr/bin/env git remote update --prune as otomatiesbe@ssh.otomaties.be
+  INFO [7b487e56] Finished in 1.515 seconds with exit status 0 (successful).
+  INFO [cc51a797] Running /usr/bin/env mkdir -p /data/sites/web/otomatiesbe/capistrano-test/releases/20220411152308 as otomatiesbe@ssh.otomaties.be
+  INFO [cc51a797] Finished in 0.253 seconds with exit status 0 (successful).
+  INFO [71f4bb72] Running /usr/bin/env git archive without-composer | /usr/bin/env tar -x -f - -C /data/sites/web/otomatiesbe/capistrano-test/releases/20220411152308 as otomatiesbe@ssh.otomaties.be
