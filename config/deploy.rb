@@ -15,6 +15,7 @@ namespace :deploy do
   task :write_revision_to_file do
     on roles(:app) do
       within repo_path do
+        execute "echo #{fetch(:release_timestamp)} #{fetch(:current_revision)}"
         execute "echo #{fetch(:release_timestamp)} #{fetch(:current_revision)} > #{fetch(:release_path)}/www/revision.txt"
       end
     end
