@@ -33,9 +33,8 @@ namespace :deploy do
       # execute :service, :nginx, :reload
       # execute "sudo service httpd restart"
       within release_path do
-      print "Reload PHP & waiting 5 seconds\n"
+      print "Reload PHP\n"
       execute "reloadPHP.sh"
-      sleep 5
       end
     end
   end
