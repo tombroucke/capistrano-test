@@ -907,3 +907,12 @@
   INFO [cc51a797] Running /usr/bin/env mkdir -p /data/sites/web/otomatiesbe/capistrano-test/releases/20220411152308 as otomatiesbe@ssh.otomaties.be
   INFO [cc51a797] Finished in 0.253 seconds with exit status 0 (successful).
   INFO [71f4bb72] Running /usr/bin/env git archive without-composer | /usr/bin/env tar -x -f - -C /data/sites/web/otomatiesbe/capistrano-test/releases/20220411152308 as otomatiesbe@ssh.otomaties.be
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-04-11 17:25:00 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [2bcff33a] Running /usr/bin/env mkdir -p /data/sites/web/otomatiesbe/tmp as otomatiesbe@ssh.otomaties.be
+  INFO [2bcff33a] Finished in 0.374 seconds with exit status 0 (successful).
+  INFO Uploading /data/sites/web/otomatiesbe/tmp/git-ssh-591e720499128341fa04.sh 100.0%
+  INFO [1b581ee3] Running /usr/bin/env chmod 700 /data/sites/web/otomatiesbe/tmp/git-ssh-591e720499128341fa04.sh as otomatiesbe@ssh.otomaties.be
+  INFO [1b581ee3] Finished in 0.189 seconds with exit status 0 (successful).
+  INFO [090bc19e] Running /usr/bin/env git ls-remote git@github.com:tombroucke/capistrano-test.git HEAD as otomatiesbe@ssh.otomaties.be
